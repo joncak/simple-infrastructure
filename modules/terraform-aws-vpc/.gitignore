@@ -1,0 +1,32 @@
+#  Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+*.lock.hcl
+
+# .tfvars files
+*.tfvars
+
+# Generated backend configuration
+backend-config.hcl
+*backend.tf
+
+# Key files
+*.pem
+
+.DS_Store
+
+# Environment files
+*.env
+*.env.sh
+
+# Visual Studio Code
+.vscode
+
+# Work directories
+work
+
+# replicated license files
+*.rli
