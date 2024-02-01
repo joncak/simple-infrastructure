@@ -12,11 +12,12 @@ output "vpc_cidr_block" {
   value       = aws_vpc.self.cidr_block
 }
 
-output "vpc_default_security_group_id" {
-  description = "The ID of the default security group in the VPC"
-  value       = aws_vpc.self.default_security_group_id
-  precondition {
-    condition     = length(aws_vpc.self.default_security_group_id) > 0
-    error_message = "The vpc_default_security_group_id ID Must be non-empty"
-  }
+output "private_subnet_ids" {
+  description = "The IDs of the private subnets"
+  value       = aws_subnet.private[*].id
+}
+
+output "public_subnet_ids" {
+  description = "The IDs of the public subnets"
+  value       = aws_subnet.public[*].id
 }
